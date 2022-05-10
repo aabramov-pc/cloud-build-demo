@@ -1,0 +1,11 @@
+steps:
+  # Deploy App Engine to project
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    id: DeployToAppEngineProduction
+    entrypoint: gcloud
+    args: [
+      "app",
+      "deploy",
+      "--project", "platform-consultancy-dev",
+    ]
+timeout: 1800s
